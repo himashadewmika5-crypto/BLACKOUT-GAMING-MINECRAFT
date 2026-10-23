@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="BLACKOUT GAMING - Minecraft gameplay, worlds, addons and gaming videos.">
+<title>BLACKOUT GAMING | Minecraft Universe</title>
+
+<style>
+:root {
+  --red: #ff2020;
+  --dark: #080808;
+  --card: #151515;
+  --text: #f5f5f5;
+  --muted: #b8b8b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,8,0.96);
+  border-bottom: 1px solid #292929;
+  padding: 14px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--red);
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  color: #ddd;
+  transition: color .2s;
+}
+
+nav a:hover {
+  color: var(--red);
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 65px 20px;
+  background:
+    radial-gradient(ellipse at center, #4b0808 0%, #190606 38%, #080808 75%);
+  border-bottom: 2px solid #390909;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: rise 1s ease-out;
+}
+
+.gaming-icon {
+  font-size: 75px;
+  filter: drop-shadow(0 0 20px #ff2020);
+  animation: pulse 2s infinite;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 8vw, 72px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 15px 0;
+  text-shadow: 0 0 25px #7d0000;
+}
+
+.hero h1 span {
+  color: var(--red);
+}
+
+.hero p {
+  color: #d0d0d0;
+  margin: 15px auto 25px;
+  max-width: 570px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 21px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid var(--red);
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: white;
+}
+
+.btn-outline {
+  color: white;
+  background: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #ff202055;
+}
+
+section {
+  padding: 65px 6%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(25px, 5vw, 36px);
+  margin-bottom: 10px;
+}
+
+.section-title span {
+  color: var(--red);
+}
+
+.section-subtitle {
+  color: var(--muted);
+  text-align: center;
+  margin: 0 auto 35px;
+  max-width: 650px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #292929;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red);
+  box-shadow: 0 8px 25px #ff202018;
+}
+
+.card-banner {
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 54px;
+  background: linear-gradient(135deg, #390707, #111, #250404);
+  border-bottom: 1px solid #333;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 19px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.small-btn {
+  display: inline-block;
+  background: #242424;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 9px 13px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.small-btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.about-box {
+  background: linear-gradient(135deg, #171717, #0c0c0c);
+  border: 1px solid #303030;
+  border-left: 4px solid var(--red);
+  border-radius: 10px;
+  padding: 28px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-box p {
+  color: #ccc;
+  margin-top: 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.stat {
+  text-align: center;
+  padding: 18px 10px;
+  background: #151515;
+  border-radius: 8px;
+  border: 1px solid #292929;
+}
+
+.stat strong {
+  color: var(--red);
+  font-size: 23px;
+  display: block;
+}
+
+.stat span {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.contact-box {
+  text-align: center;
+  padding: 35px 20px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: linear-gradient(135deg, #210606, #101010);
+}
+
+footer {
+  padding: 25px 15px;
+  text-align: center;
+  color: #aaa;
+  border-top: 1px solid #292929;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--red);
+}
+
+.top-link {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 50;
+  box-shadow: 0 0 15px #ff202044;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="#home">BLACKOUT <span>GAMING</span></a>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#videos">VIDEOS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#downloads">DOWNLOADS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="gaming-icon">🎮</div>
+
+    <h1>BLACKOUT <span>GAMING</span></h1>
+
+    <p>
+      Welcome to my gaming universe! Discover Minecraft gameplay,
+      exciting adventures, worlds, addons and more.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary"
+         href="https://youtube.com/@blackoutgaming-m1u?si=PXNTC1jxmJnPViPl"
+         target="_blank" rel="noopener">
+        ▶ SUBSCRIBE ON YOUTUBE
+      </a>
+
+      <a class="btn btn-outline" href="#downloads">
+        ⬇ EXPLORE DOWNLOADS
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">MY <span>VIDEOS</span></h2>
+  <p class="section-subtitle">
+    Check out the channel for Minecraft adventures and gaming videos.
+  </p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-banner">⛏️</div>
+      <div class="card-content">
+        <h3>Minecraft Gameplay</h3>
+        <p>Explore Minecraft worlds, survive and build amazing things.</p>
+        <a class="small-btn"
+           href="https://youtube.com/@blackoutgaming-m1u?si=PXNTC1jxmJnPViPl"
+           target="_blank" rel="noopener">WATCH CHANNEL ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-banner">🏎️</div>
+      <div class="card-content">
+        <h3>Racing Adventures</h3>
+        <p>Discover exciting rides, races and Minecraft challenges.</p>
+        <a class="small-btn"
+           href="https://youtube.com/@blackoutgaming-m1u?si=PXNTC1jxmJnPViPl"
+           target="_blank" rel="noopener">WATCH CHANNEL ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-banner">👻</div>
+      <div class="card-content">
+        <h3>Horror & Survival</h3>
+        <p>Adventure into mysterious worlds and spooky challenges.</p>
+        <a class="small-btn"
+           href="https://youtube.com/@blackoutgaming-m1u?si=PXNTC1jxmJnPViPl"
+           target="_blank" rel="noopener">WATCH CHANNEL ↗</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">ABOUT <span>ME</span></h2>
+  <p class="section-subtitle">Welcome to the BLACKOUT GAMING community.</p>
+
+  <div class="about-box">
+    <h3>🖤 BLACKOUT GAMING 🎮</h3>
+    <p>
+      This is my gaming website for Minecraft content, gaming videos,
+      worlds and useful addon links. Explore the page and visit my
+      YouTube channel for the latest uploads.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>🎮</strong>
+        <span>GAMING</span>
+      </div>
+      <div class="stat">
+        <strong>⛏️</strong>
+        <span>MINECRAFT</span>
+      </div>
+      <div class="stat">
+        <strong>🔥</strong>
+        <span>ADVENTURES</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="downloads">
+  <h2 class="section-title">WORLDS & <span>DOWNLOADS</span></h2>
+  <p class="section-subtitle">
+    Explore Minecraft resources. Check each download page for supported
+    versions and installation instructions.
+  </p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-banner">📷</div>
+      <div class="card-content">
+        <h3>Views Utilities Add-on</h3>
+        <p>
+          Visit the add-on page to read its features and check compatibility
+          with your Minecraft Bedrock version before downloading.
+        </p>
+        <a class="small-btn"
+           href="https://www.curseforge.com/minecraft-bedrock/addons/views-utilities"
+           target="_blank" rel="noopener">VIEW ADD-ON ↗</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-banner">🌍</div>
+      <div class="card-content">
+        <h3>Minecraft Worlds</h3>
+        <p>World downloads will be added here when ready.</p>
+        <span class="small-btn">COMING SOON</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-banner">🚗</div>
+      <div class="card-content">
+        <h3>Mods & Add-ons</h3>
+        <p>More Minecraft resources and add-on links coming soon.</p>
+        <span class="small-btn">COMING SOON</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">JOIN THE <span>COMMUNITY</span></h2>
+  <p class="section-subtitle">
+    Follow the channel and stay connected with BLACKOUT GAMING.
+  </p>
+
+  <div class="contact-box">
+    <h3>Ready for your next adventure? 🎮</h3>
+    <p style="color:#ccc; margin:12px 0 22px;">
+      Visit the YouTube channel for gaming videos and updates.
+    </p>
+
+    <a class="btn btn-primary"
+       href="https://youtube.com/@blackoutgaming-m1u?si=PXNTC1jxmJnPViPl"
+       target="_blank" rel="noopener">
+      ▶ VISIT MY YOUTUBE CHANNEL
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> <strong>BLACKOUT GAMING</strong></p>
+  <p>Made with 🖤 for Minecraft & gaming fans.</p>
+</footer>
+
+<a class="top-link" href="#home" aria-label="Back to top">↑</a>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
