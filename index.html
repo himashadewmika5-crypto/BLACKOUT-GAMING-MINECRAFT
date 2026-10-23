@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACKOUT GAMING</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#090909;color:#fff}
+header{background:#111;padding:18px 5%;border-bottom:2px solid #e50914;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:23px;font-weight:900;color:#ff2633}
+.logo span{color:white}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:bold}
+nav a:hover{color:#ff2633}
+.hero{text-align:center;padding:85px 20px;background:radial-gradient(ellipse at center,#4b080c 0%,#170507 42%,#090909 78%);border-bottom:1px solid #351014}
+.hero small{color:#ff454f;letter-spacing:4px;font-weight:bold}
+.hero h1{font-size:clamp(36px,8vw,68px);margin:18px 0;font-weight:900}
+.hero h1 span{color:#ff2633}
+.hero p{color:#ccc;line-height:1.7;max-width:550px;margin:0 auto 25px}
+.btn{display:inline-block;background:#e50914;color:white;padding:13px 22px;border-radius:5px;text-decoration:none;font-weight:bold;margin:5px;border:1px solid #ff333d}
+.btn:hover{background:#a90009}
+.btn.secondary{background:transparent}
+section{padding:55px 6%;max-width:1100px;margin:auto}
+.heading{font-size:28px;border-left:4px solid #ff2633;padding-left:12px;margin-bottom:25px}
+.heading span{color:#ff2633}
+.about{background:#111;border:1px solid #292929;border-radius:10px;padding:25px;line-height:1.8;color:#ddd}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#131313;border:1px solid #333;border-radius:9px;overflow:hidden}
+.thumb{height:125px;background:linear-gradient(135deg,#35080b,#171717);display:flex;align-items:center;justify-content:center;font-size:44px;border-bottom:2px solid #e50914}
+.card-content{padding:18px}
+.card h3{margin-bottom:10px}
+.card p{font-size:14px;color:#bbb;line-height:1.6;margin-bottom:15px}
+.card a{color:#ff414b;text-decoration:none;font-weight:bold}
+.note{color:#999;font-size:13px;line-height:1.7;margin-top:18px}
+.contact{text-align:center;background:#151010;border:1px solid #45151a;border-radius:10px;padding:30px}
+footer{text-align:center;padding:25px;color:#888;background:#111;border-top:2px solid #e50914;font-size:13px}
+footer strong{color:#ff2633}
+@media(max-width:480px){header{justify-content:center}nav{justify-content:center}.hero{padding:65px 15px}section{padding:40px 5%}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">BLACKOUT <span>GAMING</span></div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#videos">VIDEOS</a>
+    <a href="#about">ABOUT</a>
+    <a href="#worlds">WORLDS</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero" id="home">
+  <small>WELCOME TO MY GAMING WORLD</small>
+  <h1>BLACKOUT <span>GAMING</span></h1>
+  <p>Minecraft adventures, epic gameplay and new worlds. Join the journey and let's play!</p>
+  <a class="btn" href="https://youtube.com/" target="_blank" rel="noopener">▶ WATCH VIDEOS</a>
+  <a class="btn secondary" href="#worlds">EXPLORE WORLDS</a>
+</div>
+
+<section id="videos">
+  <h2 class="heading">LATEST <span>VIDEOS</span></h2>
+  <div class="cards">
+    <article class="card">
+      <div class="thumb">⛏️</div>
+      <div class="card-content">
+        <h3>Minecraft Adventures</h3>
+        <p>Watch my Minecraft gameplay and adventures.</p>
+        <a href="https://youtube.com/" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb">⚔️</div>
+      <div class="card-content">
+        <h3>Epic Battles</h3>
+        <p>Discover exciting fights and gaming moments.</p>
+        <a href="https://youtube.com/" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb">🏗️</div>
+      <div class="card-content">
+        <h3>Builds & Worlds</h3>
+        <p>Explore Minecraft builds, bases and worlds.</p>
+        <a href="https://youtube.com/" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+      </div>
+    </article>
+  </div>
+  <p class="note">Tip: Replace the YouTube links above with your own video links.</p>
+</section>
+
+<section id="about">
+  <h2 class="heading">ABOUT <span>ME</span></h2>
+  <div class="about">
+    <h3 style="color:#ff2633;margin-bottom:10px">🎮 Welcome, Gamers!</h3>
+    Welcome to BLACKOUT GAMING! This is my gaming space for Minecraft gameplay,
+    adventures, creative builds and fun gaming moments. Subscribe and join the community!
+    <p style="margin-top:12px">Game on. Stay strong. Be BLACKOUT!</p>
+  </div>
+</section>
+
+<section id="worlds">
+  <h2 class="heading">MINECRAFT <span>WORLDS & DOWNLOADS</span></h2>
+  <div class="cards">
+    <article class="card">
+      <div class="thumb">🌍</div>
+      <div class="card-content">
+        <h3>Minecraft Worlds</h3>
+        <p>World download links will be added here.</p>
+        <a href="#contact">Coming Soon</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="thumb">🧩</div>
+      <div class="card-content">
+        <h3>Add-ons & Packs</h3>
+        <p>Find Minecraft add-ons and resource pack links.</p>
+        <a href="#contact">Coming Soon</a>
+      </div>
+    </article>
+  </div>
+  <p class="note">Only share files you own or have permission to distribute. Check each download before installing.</p>
+</section>
+
+<section id="contact">
+  <h2 class="heading">CONTACT <span>ME</span></h2>
+  <div class="contact">
+    <p>Want to watch more gaming content?</p>
+    <p style="margin:15px 0;color:#bbb">Visit my YouTube channel and join the adventure!</p>
+    <a class="btn" href="https://youtube.com/" target="_blank" rel="noopener">▶ VISIT YOUTUBE</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 <strong>BLACKOUT GAMING</strong>. All rights reserved.</p>
+  <p style="margin-top:8px">Built for gamers 🖤🔴</p>
+</footer>
+
+</body>
+</html>
